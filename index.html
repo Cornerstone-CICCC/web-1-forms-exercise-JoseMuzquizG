@@ -8,7 +8,71 @@
 </head>
 <body>
     <form enctype="multipart/form-data" action="index.html" method="get">
-        <!-- FORM FIELDS HERE -->
+        <div class="forms">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input id="name" type="text" name="Name">
+                <label for="email">Email:</label>
+                <input id="email" type="email" name="Email">
+                <label for="password">Password:</label>
+                <input id="password" type="password" name="Password" pattern="{12, }">
+                <label for="birth">Date of Birth:</label>
+                <input type="date" name="date" placeholder="yyyy-mm-dd">
+            </fieldset>
+            <fieldset>
+                <legend>Preferences</legend>
+                <label for="color">Favorite Color:</label>
+                <input type="color">
+                <label for="hobby">Hobby:</label>
+                <input type="text" list="hobbies"/>
+                <datalist id="hobbies">
+                    <option value="Drawing"></option>
+                    <option value="Swimming"></option>
+                    <option value="Dancing"></option>
+                </datalist>
+                <label for="experience">Experience Level:</label>
+                <input type="range" name="experience" min="0" max="10" step="1">
+            </fieldset>
+            <fieldset>
+                <legend>Contact Preferences</legend>
+                <label for="contact">Preferred Contact Method</label>
+                <select name="contact" id="contact">
+                    <option value="Email">Email</option>
+                    <option value="Phone">Phone</option>
+                    <option value="Mail">Mail</option>
+                </select>
+                <label for="newsletter">Suscribe to Newsletter</label>
+                <input type="checkbox" name="newsletter" value="yes" id="yes">
+            </fieldset>
+            <fieldset>
+                <legend>Preferences</legend>
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" value="male" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="female" id="female">
+                <label for="female">Female</label>
+                <input type="radio" name="gender" value="other" id="other">
+                <label for="other">Other</label>
+            </fieldset>
+            <fieldset>
+                <legend>More Information</legend>
+                <label for="biography">Bio:</label>
+                <input type="text">
+            </fieldset>
+            <fieldset>
+                <legend>Upload Documents</legend>
+                <label for="files">Resume and other certificates:</label>
+                <div>
+                    <input type="file" name="file" accept=".pdf, .doc, .docx, .jpg, .png">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Submission</legend>
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </div>        
     </form>
 </body>
 </html>
